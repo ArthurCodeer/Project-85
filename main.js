@@ -1,23 +1,24 @@
 canvas = document.getElementById('myCanvas')
-ctx = canvas.getContext("2d");
+ctx. canvas.getContext("2d")
 
-carHeight = 100;
-carWidth = 75;
+greencarWidth = 75;
+greencarHeight = 100;
 
 background_image = "parkingLot.jpg";
 greencar_image = "car2.png";
 
-carX = 5;
-carY = 225;
+
+carX=5
+carY=225
 
 function add() {
 	backgroundTag = new Image();
-	backgroundTag.onload = uploadgreencar;
-	backgroundTag.src = greencar_image;
+	backgroundTag.onload = uploadBackground;
+	backgroundTag.src = background_image;
 
 	carTag = new Image();
-	carTag.onload = uploadBackgroud;
-	carTag.src = background_image;
+	carTag.onload = uploadgreencar;
+	carTag.src = greencar_image;
 }
 
 function uploadBackground() {
@@ -26,8 +27,7 @@ function uploadBackground() {
 }
 
 function uploadgreencar() {
-	ctx.drawImage(carTag, carX, carY, carWidth, carHeight)
-	
+	ctx.drawImage(carTag, carX, carY, greencarWidth, greencarHeight)
 }
 
 
@@ -66,10 +66,10 @@ function my_keydown(e)
 
 function up()
 {
-	if(carY >=0)
+	if(carY >= 0)
 	{
 		carY = carY - 10;
-		console.log("when up arrow is pressed,  x = " + carX + " | y + " +carY)
+		console.log("When up arrow is pressed, x =" + carX + " | y = " + carY)
 		uploadBackground();
 		uploadgreencar();
 	}
@@ -77,10 +77,10 @@ function up()
 
 function down()
 {
-	if(carY <=300)
+	if(carY <= 300)
 	{
 		carY = carY + 10;
-		console.log("when down arrow is pressed,  x = " + carX + " | y + " +carY)
+		console.log("When up arrow is pressed, x =" + carX + " | y = " + carY)
 		uploadBackground();
 		uploadgreencar();
 	}
@@ -88,10 +88,10 @@ function down()
 
 function left()
 {
-	if(carX >=0)
+	if(carX >= 0)
 	{
 		carX = carX - 10;
-		console.log("when left arrow is pressed,  x = " + carX + " | y + " +carY)
+		console.log("When up arrow is pressed, x =" + carX + " | y = " + carY)
 		uploadBackground();
 		uploadgreencar();
 	}
@@ -99,10 +99,10 @@ function left()
 
 function right()
 {
-	if(carY <=700)
+	if(carX <= 700)
 	{
-		carX = carX = 10;
-		console.log("when right arrow is pressed,  x = " + carX + " | y + " +carY)
+		carX = carX + 10;
+		console.log("When up arrow is pressed, x =" + carX + " | y = " + carY)
 		uploadBackground();
 		uploadgreencar();
 	}
